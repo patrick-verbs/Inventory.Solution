@@ -1,7 +1,35 @@
-// using System.Collections.Generic;
-// using System;
-// using Microsoft.AspNetCore.Mvc;
-// using Inventory.Models;
+using System.Collections.Generic;
+using System;
+using Microsoft.AspNetCore.Mvc;
+using Inventory.Models;
+
+namespace Inventory.Controllers
+{
+  public class CategoriesController : Controller
+  {
+    private readonly InventoryContext _db;
+
+    public CategoriesController(InventoryContext db)
+    {
+      _db = db;
+    }
+
+    // public ActionResult _CategoryCreate()
+    // {
+    //   return View();
+    // }
+
+    // [HttpPost]
+    // public ActionResult _CategoryCreate(Category category)
+    // {
+    //   Console.WriteLine("Inside create for category");
+    //   _db.Categories.Add(category);
+    //   _db.SaveChanges();
+    //   return RedirectToAction("Index", "Items");
+    // }
+
+  }
+}
 
 // namespace Inventory.Controllers
 // {

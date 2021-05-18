@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
 using Inventory.Models;
 using System.Collections.Generic;
@@ -26,9 +27,12 @@ namespace Inventory.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Item item)
+    public ActionResult Create(Item item, Category category)
     {
+      _db.Categories.Add(category);
+      _db.SaveChanges();
       _db.Items.Add(item);
+      item.CategoryId = category.Id;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
@@ -36,6 +40,9 @@ namespace Inventory.Controllers
     public ActionResult Details(int id)
     {
       Item thisItem = _db.Items.FirstOrDefault(item => item.ItemId == id);
+      Category thisCategory = _db.Categories.FirstOrDefault(category => category.Id == thisItem.CategoryId);
+      // string categoryName = thisCategory.Name;
+      ViewBag.CategoryName = thisCategory.Name;
       return View(thisItem);
     }
   }

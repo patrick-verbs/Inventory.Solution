@@ -11,6 +11,7 @@
   @Html.TextBoxFor(model => model.Description)
   @Html.LabelFor(model => model.Value)
   @Html.TextBoxFor(model => model.Value)
+  @Html.Partial("~/Views/Categories/_CategoryCreate.cshtml")
   <input type="submit" value="Add new item" />
 }
 <p>@Html.ActionLink("Show all items", "Index")</p>
