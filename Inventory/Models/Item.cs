@@ -4,6 +4,7 @@ namespace Inventory.Models
   {
     public int ItemId { get; set; }
     public string Description { get; set; }
+    public decimal Value { get; set; }
   }
 }
 
