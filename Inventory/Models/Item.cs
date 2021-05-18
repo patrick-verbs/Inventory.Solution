@@ -1,4 +1,4 @@
-namespace ToDoList.Models
+namespace Inventory.Models
 {
   public class Item
   {
@@ -10,7 +10,7 @@ namespace ToDoList.Models
 // using System.Collections.Generic;
 // using MySql.Data.MySqlClient;
 
-// namespace ToDoList.Models
+// namespace Inventory.Models
 // {
 //   public class Item
 //   {

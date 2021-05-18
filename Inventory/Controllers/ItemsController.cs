@@ -1,15 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using Inventory.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ToDoList.Controllers
+namespace Inventory.Controllers
 {
   public class ItemsController : Controller
   {
-    private readonly ToDoListContext _db;
+    private readonly InventoryContext _db;
 
-    public ItemsController(ToDoListContext db)
+    public ItemsController(InventoryContext db)
     {
       _db = db;
     }
@@ -44,10 +44,10 @@ namespace ToDoList.Controllers
 }
 
 // using Microsoft.AspNetCore.Mvc;
-// using ToDoList.Models;
+// using Inventory.Models;
 // using System.Collections.Generic;
 
-// namespace ToDoList.Controllers
+// namespace Inventory.Controllers
 // {
 //   public class ItemsController : Controller
 //   {

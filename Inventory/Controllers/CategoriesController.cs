@@ -1,9 +1,9 @@
 // using System.Collections.Generic;
 // using System;
 // using Microsoft.AspNetCore.Mvc;
-// using ToDoList.Models;
+// using Inventory.Models;
 
-// namespace ToDoList.Controllers
+// namespace Inventory.Controllers
 // {
 //   public class CategoriesController : Controller
 //   {
